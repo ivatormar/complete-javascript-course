@@ -18,6 +18,13 @@ const openModal = function () {
 for (let i = 0; i < btnsOpenModal.length; i++) {
   btnsOpenModal[i].addEventListener('click', openModal); //
 }
-btnCloseModal.addEventListener('click', closeModal);
 
+
+btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown',function(eevent){
+    console.log(eevent);
+    if(eevent.key==='Escape')closeModal()
+     
+})
